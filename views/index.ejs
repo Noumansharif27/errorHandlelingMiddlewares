@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats</title>
+  </head>
+  <body>
+    <div>
+      <% for (const chat of chats) { %>
+      <div
+        class="chat"
+        style="display: inline-block; background-color: blue; width: 16rem"
+      >
+        <p><%- chat.message %></p>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
