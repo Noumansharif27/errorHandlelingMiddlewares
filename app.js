@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "views");
 app.set("views", path.join(__dirname, "views"));
 
-app.engine("ejs", ejsMate);
+// app.engine("ejs", ejsMate);
 
 app.get("/", (req, res) => {
   console.log(req.url);
@@ -50,7 +50,6 @@ app.get("/random", Authentication, (req, res) => {
 
 app.get("/chat", async (req, res) => {
   const chats = await Chat.find();
-  console.log(chats);
   res.render("index.ejs", chats);
 });
 
