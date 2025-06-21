@@ -10,9 +10,17 @@
       <% for (const chat of chats) { %>
       <div
         class="chat"
-        style="display: inline-block; background-color: blue; width: 16rem"
+        style="
+          display: inline-block;
+          background-color: rgb(51, 51, 102);
+          width: 16rem;
+          border-radius: 1rem;
+          mix-blend-mode: difference;
+          text-align: center;
+        "
       >
         <p><%- chat.message %></p>
+        <a href="/chats/<%-chat._id %>" style="color: aliceblue">show</a>
       </div>
       <% } %>
     </div>
